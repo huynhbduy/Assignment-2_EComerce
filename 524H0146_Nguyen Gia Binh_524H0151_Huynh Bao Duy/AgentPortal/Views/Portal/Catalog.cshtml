@@ -1,0 +1,15 @@
+@model List<Item>
+@{ ViewData["Title"]="Danh mục hàng hóa"; }
+<h1>Danh mục hàng hóa</h1>
+<p class="muted">Nhập số lượng cho từng mặt hàng rồi gửi đơn. Giá tính theo quy cách bán.</p>
+@if (Model.Count==0) { <p>Kho chưa có hàng hóa.</p> } else {
+<form asp-action="Place" method="post" class="surface">
+<div class="table-responsive"><table class="table align-middle">
+<thead><tr><th>Mặt hàng</th><th>Quy cách</th><th>Đơn giá</th><th>Tồn kho</th><th>Số lượng đặt</th></tr></thead>
+<tbody>
+@foreach (var item in Model) {
+<tr><th scope="row">@item.ItemName</th><td>@item.Size</td><td class="money">@item.Price.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("vi-VN")) ₫</td><td>@item.StockQuantity</td>
+<td><input class="form-control qty" aria-label="Số lượng @item.ItemName" type="number" min="0" max="@item.StockQuantity" step="1" value="0" name="quantities[@item.ItemID]" disabled="@(item.StockQuantity == 0)"></td></tr>
+}
+</tbody></table></div><div class="actions"><button class="btn btn-primary">Gửi đơn đặt hàng</button></div></form>
+}

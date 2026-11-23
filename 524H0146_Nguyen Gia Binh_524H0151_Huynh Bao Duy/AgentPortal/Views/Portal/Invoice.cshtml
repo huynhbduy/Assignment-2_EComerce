@@ -1,0 +1,33 @@
+@model InvoiceView
+@{
+    Layout = null;
+    var order = Model.Order;
+    var vi = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+    string Money(decimal value) => value.ToString("#,0.##", vi) + " ₫";
+}
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hóa đơn #@order.OrderID</title>
+<link rel="stylesheet" href="~/css/invoice.css" asp-append-version="true">
+</head>
+<body>
+<nav aria-label="Thao tác hóa đơn">
+<a asp-action="History">← Đơn của tôi</a>
+<button type="button" onclick="window.print()">In hóa đơn</button>
+</nav>
+<main>
+<h1>Hóa đơn đặt hàng #@order.OrderID</h1>
+<p>Ngày đặt: @order.OrderDate.ToString("dd/MM/yyyy") · @(order.OrderStatus == "Shipped" ? "Đã giao cho vận chuyển" : "Chờ xử lý")</p>
+<h2>Đại lý</h2>
+<p><strong>@Model.Buyer.AgentName</strong><br>@Model.Buyer.Address<br>Điện thoại: @Model.Buyer.Phone</p>
+<div class="scroll"><table>
+<thead><tr><th scope="col">Mặt hàng</th><th scope="col">SL</th><th scope="col">Đơn giá</th><th scope="col">Thành tiền</th></tr></thead>
+<tbody>
+@foreach (var line in order.Lines.OrderBy(d => d.ID)) {
+<tr><td>@line.Item.ItemName <small>@line.Item.Size</small></td><td>@line.Quantity</td><td>@Money(line.UnitAmount)</td><td>@Money(line.Quantity * line.UnitAmount)</td></tr>
+}
+</tbody></table></div>
+<p class="total">Tổng cộng <strong>@Money(order.TotalAmount)</strong></p>
+</main></body></html>

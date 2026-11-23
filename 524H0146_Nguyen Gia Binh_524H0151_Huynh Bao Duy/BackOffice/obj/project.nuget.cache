@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2DfTSCFcGJg=",
+  "success": true,
+  "projectFilePath": "C:\\HK5\\cnpm\\qt2\\v1\\B2BWholesale\\BackOffice\\BackOffice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,18 @@
+@model List<Order>
+@{ ViewData["Title"]="Đơn của tôi"; var vi=System.Globalization.CultureInfo.GetCultureInfo("vi-VN"); }
+<h1>Đơn của tôi</h1>
+<p class="muted">Mở một đơn để xem chi tiết hàng đã đặt.</p>
+@if (Model.Count==0) { <p class="surface actions">Bạn chưa có đơn hàng. <a asp-action="Catalog">Xem hàng hóa</a></p> }
+@foreach(var order in Model) {
+<details class="surface order">
+<summary><strong>Đơn #@order.OrderID</strong> <time>@order.OrderDate.ToString("dd/MM/yyyy")</time>
+<span class="pill @(order.OrderStatus=="Shipped" ? "shipped" : "")">@(order.OrderStatus=="Shipped" ? "Đã giao cho vận chuyển" : "Chờ xử lý")</span>
+<strong>@order.TotalAmount.ToString("#,0.##",vi) ₫</strong></summary>
+<div class="table-responsive"><table class="table"><thead><tr><th>Mặt hàng</th><th>Số lượng</th><th>Đơn giá</th><th>Thành tiền</th></tr></thead><tbody>
+@foreach(var line in order.Lines) {
+<tr><th scope="row">@line.Item.ItemName</th><td>@line.Quantity</td><td>@line.UnitAmount.ToString("#,0.##",vi) ₫</td><td>@((line.Quantity*line.UnitAmount).ToString("#,0.##",vi)) ₫</td></tr>
+}
+</tbody></table></div>
+<div class="actions"><a class="btn btn-primary" asp-action="Invoice" asp-route-id="@order.OrderID">Xem và in hóa đơn</a></div>
+</details>
+}

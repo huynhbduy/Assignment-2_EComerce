@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\HK5\\cnpm\\qt2\\v1\\B2BWholesale\\AgentPortal\\wwwroot\\css\\invoice.css",
+      "PackagePath": "staticwebassets\\css\\invoice.css"
+    },
+    {
+      "Id": "C:\\HK5\\cnpm\\qt2\\v1\\B2BWholesale\\AgentPortal\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgentPortal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AgentPortal.props",
+      "PackagePath": "build\\AgentPortal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AgentPortal.props",
+      "PackagePath": "buildMultiTargeting\\AgentPortal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AgentPortal.props",
+      "PackagePath": "buildTransitive\\AgentPortal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

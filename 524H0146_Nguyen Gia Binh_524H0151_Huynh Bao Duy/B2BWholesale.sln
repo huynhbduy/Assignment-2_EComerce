@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice", "BackOffice\BackOffice.csproj", "{A2C765B0-2306-41AC-B8FC-97DD8D2C46DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentPortal", "AgentPortal\AgentPortal.csproj", "{807CC6A5-B12D-47AE-A076-BD7FA2E62036}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentPortal.Tests", "AgentPortal.Tests\AgentPortal.Tests.csproj", "{85E3D5AD-049F-4345-8066-99DDD85FB119}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2C765B0-2306-41AC-B8FC-97DD8D2C46DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C765B0-2306-41AC-B8FC-97DD8D2C46DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C765B0-2306-41AC-B8FC-97DD8D2C46DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C765B0-2306-41AC-B8FC-97DD8D2C46DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807CC6A5-B12D-47AE-A076-BD7FA2E62036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807CC6A5-B12D-47AE-A076-BD7FA2E62036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807CC6A5-B12D-47AE-A076-BD7FA2E62036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807CC6A5-B12D-47AE-A076-BD7FA2E62036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E3D5AD-049F-4345-8066-99DDD85FB119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E3D5AD-049F-4345-8066-99DDD85FB119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E3D5AD-049F-4345-8066-99DDD85FB119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E3D5AD-049F-4345-8066-99DDD85FB119}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
